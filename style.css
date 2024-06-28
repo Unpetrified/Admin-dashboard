@@ -1,3 +1,7 @@
+:root {
+    --secondary-color: rgb(0, 140, 255);
+}
+
 @font-face {
     font-family: 'finlandica';
     src: url("./assets/font/Finlandica-Regular.ttf");
@@ -5,4 +9,172 @@
 
 body {
     font-family: 'finlandica', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+svg {
+    width: 30px;
+    height: auto;
+}
+
+.side-bar-right svg {
+    fill: white;
+    width: 25px;
+}
+
+.dashboard svg {
+    width: 50px;
+}
+
+img {
+    height: auto;
+    width: 30px;
+}
+
+.profile-picture {
+    width: 70px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+}
+
+.header {
+    grid-column: 2 / 4;
+    display: flex;  
+    flex-direction: column;
+    height: fit-content;
+    padding: 20px 50px;
+}
+
+.search-notification,
+.profile-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    flex: 1 1 400px;
+    flex-direction: row;
+    height: fit-content;
+    gap: 10px;
+}
+
+.search input {
+    width: 70%;
+    background-color: rgb(231, 231, 231);
+    border: none;
+    border-radius: 20px;
+}
+
+.notification-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-name img:nth-of-type(2) {
+    width: 50px;
+}
+
+.notification-name h2 {
+    font-size: medium;
+}
+
+.profile-buttons {
+    margin-top: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-name h1,
+.profile-name h6 {
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons button {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bolder;
+    padding: 10px 30px;
+}
+
+.side-bar-right {
+    grid-row: 1 / 3;
+    background-color: var(--secondary-color);
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr 6fr 7fr;
+    row-gap: 30px;
+    height: fit-content;
+    padding: 20px 15px;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    height: fit-content;
+}
+
+.dashboard svg, .dashboard h1 {
+    margin: 0;
+}
+
+.cluster-one,
+.cluster-two {
+    display: flex;
+    flex-direction: column;
+}
+
+.cluster {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.projects,
+.side-bar-left {
+    background-color: grey;
+    padding: 20px 50px;
+    height: fit-content;
+}
+
+.projects {
+
+}
+
+.side-bar-left {
+
+}
+
+.footer {
+    grid-column: 1 / 4;
+    background-color: rgb(44, 44, 44);
+    color: rgb(216, 216, 216);
+    height: fit-content;
+    text-align: center;
+    padding: 15px 0;
 }
