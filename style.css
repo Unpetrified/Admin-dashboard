@@ -1,5 +1,5 @@
 :root {
-    --secondary-color: rgb(0, 140, 255);
+    --secondary-color: rgb(0, 115, 209);
 }
 
 @font-face {
@@ -37,8 +37,9 @@ img {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-columns: 2fr 7fr 3fr;
+    grid-template-rows: 1fr 4fr 0.5fr;
+    background-color: rgb(231, 231, 231);
 }
 
 .header {
@@ -47,6 +48,7 @@ img {
     flex-direction: column;
     height: fit-content;
     padding: 20px 50px;
+    background-color: white;
 }
 
 .search-notification,
@@ -70,6 +72,7 @@ img {
     background-color: rgb(231, 231, 231);
     border: none;
     border-radius: 20px;
+    font-size: 1.1em;
 }
 
 .notification-name {
@@ -106,7 +109,7 @@ img {
 
 .buttons {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 .buttons button {
@@ -116,6 +119,7 @@ img {
     color: white;
     font-weight: bolder;
     padding: 10px 30px;
+    cursor: pointer;
 }
 
 .side-bar-right {
@@ -155,19 +159,127 @@ img {
     gap: 10px;
 }
 
+.cluster:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 .projects,
 .side-bar-left {
-    background-color: grey;
-    padding: 20px 50px;
+    padding: 0px 20px;
     height: fit-content;
 }
 
 .projects {
+    padding-right: 0;
+}
 
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.card,
+.announcements-section,
+.trending-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card {
+    padding: 20px;
+    border-left: 8px solid rgba(255, 166, 0, 0.8);
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+
+.card h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.card p,
+.announcements p {
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    margin-top: 5px;
+}
+
+.actions img {
+    opacity: 0.7;
+    width: 20px;
+}
+
+.actions img:hover {
+    opacity: 1;
 }
 
 .side-bar-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
 
+.title {
+    margin-bottom: 10px;
+    opacity: 0.8px;
+}
+
+.announcements,
+.trends {
+    padding: 0px 25px;
+}
+
+.mini-title {
+    margin: 0;
+    margin-top: 15px;
+}
+
+.announcements p {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    padding-bottom: 20px;
+}
+
+.announcement:last-of-type p {
+    border: none;
+    padding-bottom: 0;
+}
+
+.trends {
+    margin-top: 15px;
+}
+
+.trending {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.name {
+    margin: 0;
+    font-weight: normal;
+}
+
+.project {
+    margin: 0;
+    opacity: 0.7;
 }
 
 .footer {
